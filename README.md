@@ -1,2 +1,3 @@
 # ROS2
-All the projects and baics of ros2 (Humbel)
+
+This repository contains details of my ROS 2 projects and the basics of ROS 2 (Humble).
