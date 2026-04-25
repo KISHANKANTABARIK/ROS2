@@ -1,0 +1,63 @@
+To create a package:
+    " ros2 pkg --build-type <ament_language> <package_name> "
+
+Excutable declaration in python - inside setup.py -> entry_points <- inside of this (installation):
+    " "<executsble_name> = <package_name>.<python_file_name_without.py>:main" "
+
+To Build the package:
+    " colcon build " 
+
+To build the specific package:
+    -> Remeber the package name will not be autofill you have to write it manually
+    " colcon build --packages-select <package_name> " 
+
+To source the installation:
+    " source install/setup.bash "
+
+To run the node:
+    " ros2 run <package_name> <executsble_name> "
+
+To create a new file in terminal:
+    " touch <file_name>.<file_type> " 
+        e.g -> touch first_node.py
+
+To publish a topic over terminal:
+    " ros2 topic pub "<topic_name>" <topic_type> "{<data>: "<what_to_publish>"}" "
+        e.g -> ros2 topic pub "/name" example_interfaces/msg/string "{data: "Hello"}"
+
+To subscribe the topic over terminal:
+    " ros2 topic echo "<topic_name>" "
+        e.g -> ros2 topic echo "/name"
+
+To give the Domain id:
+    " export ROS_DOMAIN_ID = <ID_number> "
+
+        -> to give the domain id permanently to your system do this:
+            " gedit .bashrc " 
+            -> inside of this at the end add this
+                " export ROS_DOMAIN_ID = <ID_number> "
+
+To check all the interfaces available:
+    " ros2 interface list"
+
+To check a paricular interface:
+    " ros2 interface list | grep <interface_name> "
+        e.g -> ros2 interface list | grep costom_interface
+
+To check all the details of the a paricular interface:
+    " ros2 interface show <interface_name> "
+        e.g -> ros2 interface show example_interface/msg/string
+
+To get all the process:
+    " ps aux "
+
+To get all the ros process:
+    " ps aux | grep ros "
+
+To kill a process:
+    " kill -9 <PID_number> "
+        -> here the PID = process ID_number
+        
+To see what are the things working behind the screen
+    "ros2 topic echo " -> tab tab -> it will show you all the topics which are currently running behind then type
+    "ros2 topic echo <topic_name> "
