@@ -1,3 +1,0 @@
-float64 temp
-bool motor_status
-string debug_message
