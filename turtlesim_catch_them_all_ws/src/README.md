@@ -55,15 +55,6 @@ source install/setup.bash
 
 ---
 
-
-
-Open a new terminal:
-
-```bash
-source install/setup.bash
-ros2 run turtlesim turtlesim_node
-```
-
 ### RUN BY NODE
 
 Repeat the steps for two more terminals 
